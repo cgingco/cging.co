@@ -1,18 +1,9 @@
 <template>
-  <div style="
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-family: Helvetica, Arial, sans-serif;
-	line-height: 0;
-  ">
-	<p>Hello, I'm Christian Gingco.</p>
-	<p>This website is still under construction, check back soon!</p>
-	<p>In the meantime, you can find me on <a href="https://www.linkedin.com/in/christian-gingco/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://github.com/cgingco" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-  </div>
+  <UApp>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
 </template>
 
 <script setup lang="ts">
@@ -25,3 +16,52 @@ useHeadSafe({
 })
 
 </script>
+
+<style lang="scss">
+
+body { /* light mode */
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition: color 0.3s, background-color 0.3s;
+
+  a, p, h1, h2, h3, h4, h5, h6 {
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  a:hover:not(.ignore-hover-effect) {
+    color: var(--color-accent-dark);
+  }
+
+  .invert-text {
+    color: var(--color-light);
+  }
+  .invert-bg {
+    background-color: var(--color-dark);
+  }
+  .svg-color-auto {
+    stroke: var(--color-dark);
+  }
+}
+
+.dark-mode body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  a:hover:not(.ignore-hover-effect) {
+    color: var(--color-accent-light);
+  }
+
+  &.invert-text {
+    color: var(--color-dark);
+  }
+
+  &.invert-bg {
+    background-color: var(--color-light);
+  }
+
+  & .svg-color-auto {
+    stroke: var(--color-light);
+  }
+}
+
+</style>
