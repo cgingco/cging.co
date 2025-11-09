@@ -39,7 +39,7 @@ body { /* light mode */
     background-color: var(--color-dark);
   }
   .svg-color-auto {
-    stroke: var(--color-dark);
+    color: var(--color-dark);
   }
 }
 
@@ -60,7 +60,7 @@ body { /* light mode */
   }
 
   & .svg-color-auto {
-    stroke: var(--color-light);
+    color: var(--color-light);
   }
 }
 
