@@ -9,9 +9,14 @@
 </template>
 
 <script lang="ts" setup>
+/**
+ * Header
+ * 
+ * This is actually "the footer" - it appears at the top of the page.
+ * It ONLY contains the color mode toggle button.
+ */
 
 const colorMode = useColorMode()
-
 
 </script>
 
