@@ -8,12 +8,20 @@
 
 <script setup lang="ts">
 
+import Parallax from 'parallax-js';
+
 useHeadSafe({
   title: 'Christian Gingco',
   meta: [
     { name: 'description', content: 'Personal website of Christian Gingco' }
   ]
 })
+
+// Initialize Parallax (see components/noise.vue)
+onMounted(() => {
+  var scene = document.getElementById('parallax');
+  var parallaxInstance = new Parallax(scene);
+});
 
 </script>
 
