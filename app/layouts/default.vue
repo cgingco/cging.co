@@ -6,4 +6,9 @@
         </div>
         <Footer />
     </div>
+    <Noise />
 </template>
+
+<script setup lang="ts">
+
+</script>
