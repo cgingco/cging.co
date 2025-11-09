@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   modules: [
-    '@nuxthub/core'
+    '@nuxthub/core',
+    '@nuxtjs/color-mode',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/content'
   ],
   devtools: { enabled: true }
 })
