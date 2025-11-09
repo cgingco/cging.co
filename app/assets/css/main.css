@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme {
+    --font-ui: "Alte Haas Grostek", "sans-serif";
+
+    --color-dark: #2E2505;
+    --color-light: #F8E5DD;
+    --color-accent-dark: #540D1C;
+    --color-accent-light: #E5997B;
+}
