@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "magicast": "^0.5.1",
+    "sass": "^1.93.3",
     "typescript": "^5.9.3",
     "wrangler": "^4.46.0"
   }

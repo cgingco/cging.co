@@ -17,33 +17,51 @@ useHeadSafe({
 
 </script>
 
-<style lang="css">
+<style lang="scss">
 
-body {
+body { /* light mode */
   background-color: var(--color-light);
   color: var(--color-dark);
-  text-rendering: geometricPrecision;
-}
+  transition: color 0.3s, background-color 0.3s;
 
-body .invert-text {
-  color: var(--color-light);
-}
+  a, p, h1, h2, h3, h4, h5, h6 {
+    transition: color 0.3s, background-color 0.3s;
+  }
 
-body .invert-bg {
-  background-color: var(--color-dark);
+  a:hover:not(.ignore-hover-effect) {
+    color: var(--color-accent-dark);
+  }
+
+  .invert-text {
+    color: var(--color-light);
+  }
+  .invert-bg {
+    background-color: var(--color-dark);
+  }
+  .svg-color-auto {
+    stroke: var(--color-dark);
+  }
 }
 
 .dark-mode body {
   background-color: var(--color-dark);
   color: var(--color-light);
-}
 
-.dark-mode body .invert-text {
-  color: var(--color-dark);
-}
+  a:hover:not(.ignore-hover-effect) {
+    color: var(--color-accent-light);
+  }
 
-.dark-mode body .invert-bg {
-  background-color: var(--color-light);
+  &.invert-text {
+    color: var(--color-dark);
+  }
+
+  &.invert-bg {
+    background-color: var(--color-light);
+  }
+
+  & .svg-color-auto {
+    stroke: var(--color-light);
+  }
 }
 
 </style>
