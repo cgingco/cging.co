@@ -8,6 +8,7 @@
 
 <script setup lang="ts">
 
+import type { BreadcrumbItem } from '@nuxt/ui';
 import Parallax from 'parallax-js';
 
 useHeadSafe({
@@ -22,6 +23,12 @@ onMounted(() => {
   var scene = document.getElementById('parallax');
   var parallaxInstance = new Parallax(scene);
 });
+
+const breadcrumb = ref<BreadcrumbItem[]>([
+  { text: 'Home', href: '/' }
+]);
+
+provide( 'breadcrumb', breadcrumb );
 
 </script>
 

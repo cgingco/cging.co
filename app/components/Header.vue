@@ -1,10 +1,13 @@
 <template>
-  <div class="absolute top-4 right-4">
-    <UColorModeButton
-    class="text-3xl lg:text-4xl hover:cursor-pointer"
-    :class="[
-      colorMode.value === 'dark' ? 'text-light bg-dark hover:bg-light hover:text-dark' : 'text-dark bg-light hover:bg-dark hover:text-light'
-    ]"/>
+  <div class="flex justify-between items-start w-full p-4">
+    <Breadcrumb></Breadcrumb>
+    <div class="">
+      <UColorModeButton
+      class="text-3xl lg:text-4xl hover:cursor-pointer"
+      :class="[
+        colorMode.value === 'dark' ? 'text-light bg-dark hover:bg-light hover:text-dark' : 'text-dark bg-light hover:bg-dark hover:text-light'
+      ]"/>
+    </div>
   </div>
 </template>
 
